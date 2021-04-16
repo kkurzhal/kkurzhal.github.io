@@ -1,7 +1,89 @@
 <!doctype html>
 <html>
-  <body>
-    <h1>Hello World!</h1>
-    <p>Content is coming soon; stay tuned!</p>
-  </body>
+    <head>
+	<style>
+	 body {
+	     display: grid;
+	     grid-template-columns: 15% 70% 15%;
+	     grid-template-rows: auto;
+	     grid-template-areas:
+		 ". header ."
+		 ". content .";
+	 }
+
+	 .header {
+	     grid-area: header;
+	 }
+
+	 .content {
+	     grid-area: content;
+	 }
+
+	 a {
+	     white-space: pre-wrap; /* CSS3 */    
+	     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	     white-space: -pre-wrap; /* Opera 4-6 */    
+	     white-space: -o-pre-wrap; /* Opera 7 */    
+	     word-wrap: break-word; /* Internet Explorer 5.5+ */
+	 }
+	 section {
+	     margin-top: 50px;
+	     margin-bottom: 50px;
+	 }
+	</style>
+    </head>
+    <body>
+	<h1 class="header">Kyle Kurzhal - Cryptocurrency, Finance, And Beyond</h1>
+	<div class="content">
+	    <section>
+		<h2>What Is This? Where Am I? Who Are You?</h2>
+		<p>
+		    Hello, and welcome!  Let me give you a quick rundown of what you'll find here.  If you're looking to learn more about cryptocurrency, or if you're a holder of ADA looking to delegate to a stake pool, then this content will be helpful to you.
+		</p>
+
+		<h3>Too Long, Didn't Read</h3>
+		<ul>
+		    <li>Details about the Cardano stake pool that I operate can be found in a section below.</li>
+		    <li>Links to my video content on cryptocurrency and other social media accounts in general can be found below.  These are my official social media accounts, please be wary of those who pretend to be me.  <b>If it doesn't match what's listed below, assume that it's fake.</b></li>
+		    <li>If you'd like to donate to support my work, I also have some cryptocurrency addresses and affiliate links listed below.</li>
+		</ul>
+
+		<h3>A Bit About Me</h3>
+		<i>Coming Soon...</i>
+	    </section>
+	    <section>
+		<h2>Stake Pool [KYLEK]</h2>
+
+		<h3>Mission Statement</h3>
+		<p>I originally created this stake pool because I believe in the Cardano project.  My goal is to support the decentralization of the network, and provide a service which I believe will help impact the future of reliable finance for every person.</p>
+
+		<h3>Current Pool Stats</h3>
+		<iframe width="500" height="400" frameborder="0" src="https://js.adapools.org/widget.html?pool=ecb45f2dc8b52cbf635692ec17664005ff26263714370eee0e112aa6"><a href="https://adapools.org/pool/ecb45f2dc8b52cbf635692ec17664005ff26263714370eee0e112aa6">Detail</a></iframe>
+
+		<h3>The Tech Details</h3>
+		<p>The pool is running in a regional Kubernetes cluster in the USA via Google Kubernetes Engine (GKE). The master nodes are managed by GKE, and there are two pool nodes running in separate availability zones (2 cpu, 8GB memory, 50 GB SSD for each). I’m considering upping some of these resources.</p>
+		
+		<p>As for the master nodes, these are running across separate availability zones in order to ensure that the Cardano nodes are up and running at all times. In the case that one Cardano node or a server in general becomes unresponsive, Kubernetes will automatically reschedule the Cardano node to the other server that is running.</p>
+		
+		<p>Something else that I’m considering is running another relay node to make sure that any potential downtime is minimized.</p>
+	    </section>
+	    <section>
+		<h2>Social Media</h2>
+		<ul>
+		    <li><b>YouTube</b> - <a href="https://www.youtube.com/channel/UCnN9qwuiYNCqK8ashZND7ug">https://www.youtube.com/channel/UCnN9qwuiYNCqK8ashZND7ug</a></li>
+		    <li><b>Minds</b> - <a href="https://www.minds.com/kylekurzhal/">https://www.minds.com/kylekurzhal/</a></li>
+		    <li><b>Gab</b> - <a href="https://gab.com/kylekurzhal">https://gab.com/kylekurzhal</a></li>
+		    <li><b>FaceBook</b> - <a href="https://www.facebook.com/kylekurzhal">https://www.facebook.com/kylekurzhal</a></li>
+		</ul>
+	    </section>
+	    <section>
+		<h2>Donate</h2>
+		<i>Coming soon...</i>
+	    </section>
+	    <section>
+		<h2>Affiliate Links</h2>
+		<i>Coming soon...</i>
+	    </section>
+	</div>
+    </body>
 </html>
